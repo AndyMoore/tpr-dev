@@ -1,0 +1,13 @@
+project: tpr
+environments:
+  - name: NFT
+    namespace: tpr-dev
+    deployment:
+      method: rolling-upgrade
+    services:
+      - type: mysql
+        name: tprdevmysql
+        version: 5.6
+      - type: mongo
+        name: tprdevmongo
+        version: 2.6
