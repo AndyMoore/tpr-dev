@@ -12,3 +12,4 @@ environments:
         name: tprdevmongo
         version: 2.6
         replicas: 5
+        test: "abc"
