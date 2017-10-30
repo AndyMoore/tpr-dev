@@ -1,6 +1,6 @@
 project: tpr
 environments:
-  - name: NFT
+  - name: Development
     namespace: tpr-dev
     deployment:
       method: rolling-upgrade
