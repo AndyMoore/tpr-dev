@@ -11,3 +11,4 @@ environments:
       - type: mongo
         name: tprdevmongo
         version: 2.6
+        replicas: 5
