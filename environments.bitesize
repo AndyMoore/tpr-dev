@@ -12,3 +12,9 @@ environments:
         name: tprdevmongo
         version: 2.6
         test: "abc"
+      - type: mysql
+        name: tprdevmysql
+        version: 5.6
+        iops: 25
+        dbinstanceclass: db.m3.large
+        allocatedstorage: 200
