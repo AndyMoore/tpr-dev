@@ -21,3 +21,12 @@ environments:
           dbinstanceclass: db.m3.large
           allocatedstorage: 200
           monitoringinterval: 1
+      - type: mysql
+        name: tprdevmysql6
+        version: 5.7
+        replicas: 3
+        options:
+          multiaz: true
+          dbinstanceclass: db.m3.large
+          allocatedstorage: 200
+          monitoringinterval: 1
