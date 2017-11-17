@@ -12,12 +12,3 @@ environments:
         name: tprdevmongo
         version: 2.6
         test: "abc"
-      - type: mysql
-        name: tprdevmysql2
-        version: 5.7
-        replicas: 3
-        options:
-          multiaz: true
-          dbinstanceclass: db.m3.large
-          allocatedstorage: 200
-          monitoringinterval: 1
