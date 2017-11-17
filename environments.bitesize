@@ -13,11 +13,7 @@ environments:
         version: 2.6
         test: "abc"
       - type: mysql
-        name: tprdevmysql2
-        version: 5.6
-        iops: 25
-        dbinstanceclass: db.m3.large
-        allocatedstorage: 200
+        name: tprdevmysql4
       - type: mysql
         name: tprdevmysql3
         version: 5.7
