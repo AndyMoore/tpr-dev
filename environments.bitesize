@@ -13,12 +13,11 @@ environments:
         version: 2.6
         test: "abc"
       - type: mysql
-        name: tprdevmysql4
-      - type: mysql
-        name: tprdevmysql3
+        name: tprdevmysql5
         version: 5.7
         replicas: 3
         options:
           multiaz: false
           dbinstanceclass: db.m3.large
           allocatedstorage: 200
+          monitoringinterval: 1
