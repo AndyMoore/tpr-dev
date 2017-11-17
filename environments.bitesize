@@ -21,7 +21,8 @@ environments:
       - type: mysql
         name: tprdevmysql3
         version: 5.7
-        multiaz: false
         replicas: 3
-        dbinstanceclass: db.m3.large
-        allocatedstorage: 200
+        options:
+          multiaz: false
+          dbinstanceclass: db.m3.large
+          allocatedstorage: 200
