@@ -28,3 +28,4 @@ environments:
           multiaz: false
           dbinstanceclass: db.m3.large
           allocatedstorage: 200
+          iops: 250
