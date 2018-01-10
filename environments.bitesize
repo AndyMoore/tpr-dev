@@ -25,7 +25,7 @@ environments:
           version: 3.2.6
           nodetype: cache.r4.large
       - type: redis
-        name: andy3
+        name: andy4
         options:
           version: 3.2.10
       - type: mysql
