@@ -28,6 +28,8 @@ environments:
         name: andy4
         options:
           version: 3.2.10
+      - type: redis
+        name: andy5
       - type: mysql
         name: nomultiaz
         version: 5.6
