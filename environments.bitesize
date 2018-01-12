@@ -6,39 +6,35 @@ environments:
       method: rolling-upgrade
     services:
       - type: redis
-        name: redis1
+        name: demo1
         options:
           shards: 3
           replicas: 3
           version: 3.2.10
           nodetype: cache.r4.large
       - type: redis
-        name: redis2
+        name: demo2
         options:
           shards: 3
           version: 3.2.6
           nodetype: cache.r4.large
       - type: redis
-        name: redis3
+        name: demo3
         options:
           replicas: 3
           version: 3.2.6
           nodetype: cache.r4.large
       - type: redis
-        name: redis4
+        name: demo4
         options:
           version: 3.2.10
       - type: redis
-        name: redis5
+        name: demo5
       - type: mysql
         name: nomultiaz
         version: 5.6
-      - type: mongo
-        name: tprdevmongo
-        version: 2.6
-        test: "abc"
       - type: mysql
-        name: andydb
+        name: demodb
         version: 5.7
         replicas: 3
         options:
@@ -46,7 +42,7 @@ environments:
           dbinstanceclass: db.m3.large
           allocatedstorage: 200
       - type: mysql
-        name: andydbsngl
+        name: demodbsngl
         version: 5.6
         replicas: 3
         options:
@@ -54,3 +50,7 @@ environments:
           dbinstanceclass: db.m3.large
           allocatedstorage: 200
           iops: 250
+#      - type: mongo
+#        name: tprdevmongo
+#        version: 2.6
+#        test: "abc"
