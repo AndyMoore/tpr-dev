@@ -51,13 +51,9 @@ environments:
           allocatedstorage: 200
           iops: 250
       - type: mysql
-        name: andytest
-        version: 5.6
+        name: nooptions
         options:
           multiaz: false
-          dbinstanceclass: db.m3.large
-          allocatedstorage: 200
-          iops: 250
 #      - type: mongo
 #        name: tprdevmongo
 #        version: 2.6
