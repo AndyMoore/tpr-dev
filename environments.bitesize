@@ -6,30 +6,30 @@ environments:
       method: rolling-upgrade
     services:
       - type: redis
-        name: test1
+        name: demo1
         options:
           shards: 3
           replicas: 3
           version: 3.2.10
           nodetype: cache.r4.large
       - type: redis
-        name: test2
+        name: demo2
         options:
           shards: 3
           version: 3.2.6
           nodetype: cache.r4.large
       - type: redis
-        name: test3
+        name: demo3
         options:
           replicas: 3
           version: 3.2.6
           nodetype: cache.r4.large
       - type: redis
-        name: test4
+        name: demo4
         options:
           version: 3.2.10
       - type: redis
-        name: test5
+        name: demo5
       - type: mysql
         name: nomultiaz
         version: 5.6
