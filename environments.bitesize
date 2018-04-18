@@ -58,3 +58,11 @@ environments:
 #        name: tprdevmongo
 #        version: 2.6
 #        test: "abc"
+      - type: postgres
+        name: demodb
+        options:
+          version: 5.7
+          replicas: 3
+          multiaz: true
+          dbinstanceclass: db.m3.large
+          allocatedstorage: 200
