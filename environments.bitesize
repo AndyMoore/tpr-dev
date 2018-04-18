@@ -61,7 +61,7 @@ environments:
       - type: postgres
         name: demodb
         options:
-          version: 5.7
+          version: 10.1
           replicas: 3
           multiaz: true
           dbinstanceclass: db.m3.large
