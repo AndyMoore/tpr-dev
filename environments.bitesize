@@ -66,3 +66,12 @@ environments:
           multiaz: true
           dbinstanceclass: db.m3.large
           allocatedstorage: 200
+      - type: postgres
+        name: pgnover
+        options:
+          replicas: 3
+          multiaz: true
+          dbinstanceclass: db.m3.large
+          allocatedstorage: 200
+      - type: postgres
+        name: pgnodef
