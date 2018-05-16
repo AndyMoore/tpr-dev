@@ -39,7 +39,7 @@ environments:
           version: 5.7
           replicas: 3
           multiaz: true
-          dbinstanceclass: db.m3.large
+          dbinstanceclass: db.m4.large
           allocatedstorage: 200
       - type: mysql
         name: demodbsngl
@@ -47,7 +47,7 @@ environments:
           version: 5.6
           replicas: 3
           multiaz: false
-          dbinstanceclass: db.m3.large
+          dbinstanceclass: db.m4.large
           allocatedstorage: 200
           iops: 250
       - type: mysql
@@ -64,14 +64,26 @@ environments:
           version: 10.1
           replicas: 3
           multiaz: true
-          dbinstanceclass: db.m3.large
+          dbinstanceclass: db.m4.large
           allocatedstorage: 200
+      - type: postgres
+        name: demodb
+        options:
+          version: 9.6
+          multiaz: false
+          dbinstanceclass: db.m4.large
       - type: postgres
         name: pgnover
         options:
           replicas: 3
           multiaz: true
-          dbinstanceclass: db.m3.large
+          dbinstanceclass: db.m4.large
           allocatedstorage: 200
       - type: postgres
         name: pgnodef
+      - type: volume
+        name: volname
+        options:
+          size: 100
+          mountpoint: /mnt
+          performancemode: true
