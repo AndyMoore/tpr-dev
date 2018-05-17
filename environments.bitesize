@@ -5,6 +5,16 @@ environments:
     deployment:
       method: rolling-upgrade
     services:
+      - name: andy1
+        application: nginx
+        version: 1.13.12
+        replicas: 2
+        volumes:
+          - name: my-vol
+            path: /data/my-storage
+            modes: ReadOnlyMany
+            size: 100G
+            type: EFS
       - type: postgres
         name: demodb10
         options:
@@ -28,9 +38,3 @@ environments:
           allocatedstorage: 200
       - type: postgres
         name: pgnodef
-      - type: volume
-        name: myvol
-        path: /data/my-storage
-        modes: ReadOnlyMany
-        size: 100G
-        type: EFS
