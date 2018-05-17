@@ -6,8 +6,8 @@ environments:
       method: rolling-upgrade
     services:
       - name: andy1
-        application: nginx
-        version: 1.13.12
+        application: pearsontechnology/bitesize-healthcheck-app
+        version: v0.3.0
         replicas: 2
         volumes:
           - name: my-vol
