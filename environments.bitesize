@@ -28,3 +28,9 @@ environments:
           allocatedstorage: 200
       - type: postgres
         name: pgnodef
+      - type: volume
+        name: myvol
+        path: /data/my-storage
+        modes: ReadOnlyMany
+        size: 100G
+        type: EFS
