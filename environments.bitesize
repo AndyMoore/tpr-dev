@@ -5,18 +5,61 @@ environments:
     deployment:
       method: rolling-upgrade
     services:
-      - name: andy1
-        application: pearsontechnology/bitesize-healthcheck-app
-        version: v0.3.0
-        replicas: 2
-        volumes:
-          - name: my-vol
-            path: /data/my-storage
-            modes: ReadOnlyMany
-            size: 100G
-            type: EFS
+      - type: redis
+        name: test1
+        options:
+          shards: 3
+          replicas: 3
+          version: 3.2.10
+          nodetype: cache.r4.large
+      - type: redis
+        name: test2
+        options:
+          shards: 3
+          version: 3.2.6
+          nodetype: cache.r4.large
+      - type: redis
+        name: test3
+        options:
+          replicas: 3
+          version: 3.2.6
+          nodetype: cache.r4.large
+      - type: redis
+        name: test4
+        options:
+          version: 3.2.10
+      - type: redis
+        name: test5
+      - type: mysql
+        name: nomultiaz
+        version: 5.6
+      - type: mysql
+        name: demodb
+        options:
+          version: 5.7
+          replicas: 3
+          multiaz: true
+          dbinstanceclass: db.m4.large
+          allocatedstorage: 200
+      - type: mysql
+        name: demodbsngl
+        options:
+          version: 5.6
+          replicas: 3
+          multiaz: false
+          dbinstanceclass: db.m4.large
+          allocatedstorage: 200
+          iops: 250
+      - type: mysql
+        name: nooptions
+        options:
+          multiaz: false
+#      - type: mongo
+#        name: tprdevmongo
+#        version: 2.6
+#        test: "abc"
       - type: postgres
-        name: demodb10
+        name: demodb
         options:
           version: 10.1
           replicas: 3
@@ -24,7 +67,7 @@ environments:
           dbinstanceclass: db.m4.large
           allocatedstorage: 200
       - type: postgres
-        name: demodb9
+        name: demodb
         options:
           version: 9.6
           multiaz: false
